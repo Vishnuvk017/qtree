@@ -1,0 +1,19 @@
+---
+- name: install package in system
+  hosts: ubuntu
+  become: yes
+  vars:
+    software_packages:
+      - openjdk-11-jdk
+      - python3
+      - nginx
+      - mysq-server
+  tasks:
+    - name: update apt cache
+      apt:
+        update_cache: yes
+    - name: install software package
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ software_packages }}"  

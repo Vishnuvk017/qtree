@@ -1,0 +1,15 @@
+---
+- name: install nginx package in system
+  hosts: all
+  tasks:
+    - name: install nginx in ubuntu
+      apt:
+        update_cache: yes
+        name: nginx
+        state: absent
+      when: ansible_distribution == 'Ubuntu' 
+    - name: install nginx in ubuntu 
+      dnf:
+        name: nginx
+        state: absent
+      when: ansible_distribution == 'Amazon' 

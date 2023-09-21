@@ -1,0 +1,14 @@
+---
+- name: server
+  hosts: all
+  tasks:
+    - name: create user
+      user:
+        name: moneesh
+        password: 1234
+    - name: create file
+      file:
+        name: qtree1
+        path: /root/aws.txt
+        state: touch
+        
