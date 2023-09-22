@@ -1,6 +1,6 @@
 ---
 - name: install nginx index
-  hosts: apache
+  hosts: apache1
   tasks:
     - name: update index file 
       copy:
