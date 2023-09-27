@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example_bucket" {
-  bucket = "statefileqtreeererere"     //update your unique bucket name          
+  bucket = "statefileqtreeerereremooo"     //update your unique bucket name          
   tags = {
     Name = "statefolder"
   }
